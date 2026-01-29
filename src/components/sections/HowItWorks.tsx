@@ -58,11 +58,59 @@ export default function HowItWorks() {
             {t("dealFlow.title")}
           </motion.h3>
 
-          <div className="relative">
-            {/* Connection line */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 -translate-y-1/2" />
+          {/* Mobile: Vertical timeline layout */}
+          <div className="lg:hidden max-w-sm mx-auto">
+            {dealFlowSteps.map((step, index) => (
+              <motion.div
+                key={step.key}
+                variants={fadeInUp}
+                className="relative flex items-start gap-3 sm:gap-4"
+              >
+                {/* Timeline connector */}
+                <div className="flex flex-col items-center">
+                  {/* Step number circle */}
+                  <div
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-800 border-2 border-slate-700 flex items-center justify-center flex-shrink-0 z-10 ${step.color}`}
+                  >
+                    <span className="text-xs sm:text-sm font-bold">{index + 1}</span>
+                  </div>
+                  {/* Connecting line */}
+                  {index < dealFlowSteps.length - 1 && (
+                    <div className="w-0.5 h-full min-h-[3rem] bg-gradient-to-b from-slate-600 to-slate-700" />
+                  )}
+                </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-2">
+                {/* Card content */}
+                <div className="flex-1 pb-4">
+                  <Card
+                    className="p-3 sm:p-4 bg-slate-900 border-slate-700"
+                    hover={false}
+                  >
+                    <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
+                      <div
+                        className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 ${step.color}`}
+                      >
+                        <step.icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                      </div>
+                      <h4 className="font-semibold text-white text-sm sm:text-base">
+                        {t(`dealFlow.steps.${step.key}.title`)}
+                      </h4>
+                    </div>
+                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed ml-10 sm:ml-[52px]">
+                      {t(`dealFlow.steps.${step.key}.description`)}
+                    </p>
+                  </Card>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Desktop: Horizontal flow */}
+          <div className="hidden lg:block relative">
+            {/* Connection line */}
+            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 -translate-y-1/2" />
+
+            <div className="grid grid-cols-6 gap-2">
               {dealFlowSteps.map((step, index) => (
                 <motion.div
                   key={step.key}
@@ -70,23 +118,23 @@ export default function HowItWorks() {
                   className="relative"
                 >
                   <Card
-                    className="text-center p-3 sm:p-4 lg:p-6 bg-slate-900 border-slate-700"
+                    className="text-center p-6 bg-slate-900 border-slate-700"
                     hover={false}
                   >
                     <div
-                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center mx-auto mb-2 sm:mb-3 ${step.color}`}
+                      className={`w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mx-auto mb-3 ${step.color}`}
                     >
-                      <step.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                      <step.icon className="w-6 h-6" />
                     </div>
-                    <h4 className="font-semibold text-white text-xs sm:text-sm mb-1">
+                    <h4 className="font-semibold text-white text-sm mb-1">
                       {t(`dealFlow.steps.${step.key}.title`)}
                     </h4>
-                    <p className="text-slate-400 text-[10px] sm:text-xs leading-tight">
+                    <p className="text-slate-400 text-xs leading-tight">
                       {t(`dealFlow.steps.${step.key}.description`)}
                     </p>
                   </Card>
                   {index < dealFlowSteps.length - 1 && (
-                    <div className="hidden lg:flex absolute top-1/2 -right-1 transform translate-x-1/2 -translate-y-1/2 z-10">
+                    <div className="flex absolute top-1/2 -right-1 transform translate-x-1/2 -translate-y-1/2 z-10">
                       <ArrowRight className="w-4 h-4 text-slate-600" />
                     </div>
                   )}
