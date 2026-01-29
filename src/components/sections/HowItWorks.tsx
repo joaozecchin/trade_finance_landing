@@ -49,11 +49,11 @@ export default function HowItWorks() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
           <motion.h3
             variants={fadeInUp}
-            className="text-xl font-semibold text-white mb-8 text-center"
+            className="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8 text-center"
           >
             {t("dealFlow.title")}
           </motion.h3>
@@ -62,7 +62,7 @@ export default function HowItWorks() {
             {/* Connection line */}
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 -translate-y-1/2" />
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-2">
               {dealFlowSteps.map((step, index) => (
                 <motion.div
                   key={step.key}
@@ -70,18 +70,18 @@ export default function HowItWorks() {
                   className="relative"
                 >
                   <Card
-                    className="text-center p-4 lg:p-6 bg-slate-900 border-slate-700"
+                    className="text-center p-3 sm:p-4 lg:p-6 bg-slate-900 border-slate-700"
                     hover={false}
                   >
                     <div
-                      className={`w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center mx-auto mb-3 ${step.color}`}
+                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-800 flex items-center justify-center mx-auto mb-2 sm:mb-3 ${step.color}`}
                     >
-                      <step.icon className="w-6 h-6" />
+                      <step.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <h4 className="font-semibold text-white text-sm mb-1">
+                    <h4 className="font-semibold text-white text-xs sm:text-sm mb-1">
                       {t(`dealFlow.steps.${step.key}.title`)}
                     </h4>
-                    <p className="text-slate-400 text-xs">
+                    <p className="text-slate-400 text-[10px] sm:text-xs leading-tight">
                       {t(`dealFlow.steps.${step.key}.description`)}
                     </p>
                   </Card>
@@ -102,27 +102,27 @@ export default function HowItWorks() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
           <motion.h3
             variants={fadeInUp}
-            className="text-xl font-semibold text-white mb-8 text-center"
+            className="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8 text-center"
           >
             {t("settlement.title")}
           </motion.h3>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {/* Traditional */}
             <motion.div variants={fadeInUp}>
-              <Card className="p-6 bg-slate-800/50 border-slate-700">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-slate-400" />
-                    <h4 className="font-semibold text-white">
+              <Card className="p-4 sm:p-6 bg-slate-800/50 border-slate-700">
+                <div className="flex items-center justify-between mb-3 sm:mb-4 gap-2">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 flex-shrink-0" />
+                    <h4 className="font-semibold text-white text-sm sm:text-base truncate">
                       {t("settlement.traditional.title")}
                     </h4>
                   </div>
-                  <span className="text-amber-400 font-mono text-sm">
+                  <span className="text-amber-400 font-mono text-xs sm:text-sm flex-shrink-0">
                     {t("settlement.traditional.duration")}
                   </span>
                 </div>
@@ -136,10 +136,10 @@ export default function HowItWorks() {
                       className="h-full bg-gradient-to-r from-amber-500 to-amber-600"
                     />
                   </div>
-                  <div className="flex justify-between mt-2 text-xs text-slate-500">
+                  <div className="flex justify-between mt-2 text-[10px] sm:text-xs text-slate-500 gap-1">
                     {(t.raw("settlement.traditional.steps") as string[]).map(
                       (step: string, i: number) => (
-                        <span key={i}>{step}</span>
+                        <span key={i} className="truncate">{step}</span>
                       )
                     )}
                   </div>
@@ -149,15 +149,15 @@ export default function HowItWorks() {
 
             {/* Blockchain */}
             <motion.div variants={fadeInUp}>
-              <Card className="p-6 bg-slate-800/50 border-emerald-500/30">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-emerald-400" />
-                    <h4 className="font-semibold text-white">
+              <Card className="p-4 sm:p-6 bg-slate-800/50 border-emerald-500/30">
+                <div className="flex items-center justify-between mb-3 sm:mb-4 gap-2">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 flex-shrink-0" />
+                    <h4 className="font-semibold text-white text-sm sm:text-base truncate">
                       {t("settlement.blockchain.title")}
                     </h4>
                   </div>
-                  <span className="text-emerald-400 font-mono text-sm">
+                  <span className="text-emerald-400 font-mono text-xs sm:text-sm flex-shrink-0">
                     {t("settlement.blockchain.duration")}
                   </span>
                 </div>
@@ -171,10 +171,10 @@ export default function HowItWorks() {
                       className="h-full bg-gradient-to-r from-emerald-500 to-emerald-400"
                     />
                   </div>
-                  <div className="flex justify-between mt-2 text-xs text-slate-500">
+                  <div className="flex justify-between mt-2 text-[10px] sm:text-xs text-slate-500 gap-1">
                     {(t.raw("settlement.blockchain.steps") as string[]).map(
                       (step: string, i: number) => (
-                        <span key={i}>{step}</span>
+                        <span key={i} className="truncate">{step}</span>
                       )
                     )}
                   </div>
@@ -185,7 +185,7 @@ export default function HowItWorks() {
 
           <motion.p
             variants={fadeInUp}
-            className="text-center text-emerald-400 font-semibold mt-6"
+            className="text-center text-emerald-400 font-semibold mt-4 sm:mt-6 text-sm sm:text-base"
           >
             {t("settlement.timeSaved")}
           </motion.p>
@@ -200,12 +200,12 @@ export default function HowItWorks() {
         >
           <motion.h3
             variants={fadeInUp}
-            className="text-xl font-semibold text-white mb-8 text-center"
+            className="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8 text-center"
           >
             {t("collateral.title")}
           </motion.h3>
 
-          <div className="max-w-2xl mx-auto space-y-4">
+          <div className="max-w-2xl mx-auto space-y-3 sm:space-y-4">
             {collateralLayers.map((layer, index) => (
               <motion.div
                 key={layer.key}
@@ -213,18 +213,18 @@ export default function HowItWorks() {
                 custom={index}
               >
                 <Card
-                  className={`p-4 border ${layer.color}`}
+                  className={`p-3 sm:p-4 border ${layer.color}`}
                   hover={false}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center flex-shrink-0">
-                      <layer.icon className="w-5 h-5 text-white" />
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-slate-800 flex items-center justify-center flex-shrink-0">
+                      <layer.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-white">
+                    <div className="min-w-0">
+                      <h4 className="font-semibold text-white text-sm sm:text-base">
                         {t(`collateral.layers.${layer.key}.title`)}
                       </h4>
-                      <p className="text-slate-400 text-sm">
+                      <p className="text-slate-400 text-xs sm:text-sm">
                         {t(`collateral.layers.${layer.key}.description`)}
                       </p>
                     </div>

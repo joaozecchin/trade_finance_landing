@@ -70,7 +70,7 @@ export default function Hero() {
 
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
             >
               {t("title")}{" "}
               <span className="gradient-text">{t("titleHighlight")}</span>
@@ -78,7 +78,7 @@ export default function Hero() {
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg sm:text-xl text-slate-400 mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg md:text-xl text-slate-400 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0"
             >
               {t("subtitle")}
             </motion.p>
@@ -103,18 +103,18 @@ export default function Hero() {
             {/* Stats */}
             <motion.div
               variants={fadeInUp}
-              className="grid grid-cols-3 gap-4 lg:gap-8"
+              className="grid grid-cols-1 xs:grid-cols-3 gap-3 sm:gap-4 lg:gap-8"
             >
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center lg:text-left p-4 rounded-xl bg-slate-900/50 border border-slate-800"
+                  className="text-center lg:text-left p-3 sm:p-4 rounded-xl bg-slate-900/50 border border-slate-800"
                 >
-                  <stat.icon className="w-5 h-5 text-blue-400 mx-auto lg:mx-0 mb-2" />
-                  <div className="text-xl sm:text-2xl font-bold text-white financial-number">
+                  <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 mx-auto lg:mx-0 mb-1 sm:mb-2" />
+                  <div className="text-base sm:text-xl lg:text-2xl font-bold text-white financial-number truncate">
                     {stat.value}
                   </div>
-                  <div className="text-xs sm:text-sm text-slate-400">
+                  <div className="text-[10px] sm:text-xs lg:text-sm text-slate-400 truncate">
                     {stat.label}
                   </div>
                 </div>
@@ -122,12 +122,12 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Globe */}
+          {/* Globe - hidden on small mobile, shown from sm breakpoint */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative h-[450px] lg:h-[550px]"
+            className="relative h-[280px] sm:h-[350px] md:h-[450px] lg:h-[550px] hidden xs:block"
           >
             <TradeRoutesGlobe />
           </motion.div>

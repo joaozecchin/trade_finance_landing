@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Custom xs breakpoint for very small screens */
+@custom-media --xs (min-width: 475px);
+
+@theme inline {
+  --breakpoint-xs: 475px;
+}
+
 :root {
   --background: #020617;
   --foreground: #f8fafc;
@@ -87,10 +94,22 @@ body {
 
 /* Section styling */
 section {
-  padding: 6rem 1.5rem;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+  section {
+    padding: 4rem 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
+  section {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
   section {
     padding: 8rem 2rem;
   }
