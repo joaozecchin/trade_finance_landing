@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "title": "Trade Finance CR | Institutional-Grade Returns",
+    "description": "Earn 12% EUR returns backed by real commodity trade finance receivables. Blockchain-enabled settlement, institutional security."
+  },
+  "nav": {
+    "product": "Product",
+    "howItWorks": "How It Works",
+    "pipeline": "Pipeline",
+    "whyTradeFinance": "Why Trade Finance",
+    "faq": "FAQ",
+    "invest": "Invest Now"
+  },
+  "hero": {
+    "badge": "Secured Credit Note",
+    "title": "Institutional-Grade Trade Finance",
+    "titleHighlight": "Blockchain-Enabled",
+    "subtitle": "Earn 12% EUR returns backed by real commodity receivables. Short-duration, collateralized, and diversified across global trade routes.",
+    "cta": {
+      "primary": "View Pipeline",
+      "secondary": "How It Works"
+    },
+    "stats": {
+      "pipeline": "Pipeline",
+      "activeDeals": "Active Deals",
+      "avgDuration": "Avg Duration",
+      "days": "days"
+    }
+  },
+  "product": {
+    "title": "Two-Tranche Structure",
+    "subtitle": "Choose your risk-return profile",
+    "senior": {
+      "title": "Senior Tranche",
+      "badge": "Fixed Return",
+      "return": "12% p.a.",
+      "currency": "EUR",
+      "features": {
+        "priority": "First in payment waterfall",
+        "fixed": "Fixed annual return",
+        "risk": "Lower risk profile",
+        "duration": "30-90 day cycles"
+      },
+      "cta": "Select Senior"
+    },
+    "junior": {
+      "title": "Junior Tranche",
+      "badge": "Excess Returns",
+      "return": "Variable",
+      "currency": "EUR",
+      "features": {
+        "upside": "Equity-like upside potential",
+        "excess": "All returns above 12%",
+        "risk": "Higher risk/reward",
+        "duration": "30-90 day cycles"
+      },
+      "cta": "Select Junior"
+    },
+    "cr": {
+      "title": "CR Securitization",
+      "subtitle": "Brazilian regulatory framework protecting your investment",
+      "features": {
+        "spv": {
+          "title": "SPV Structure",
+          "description": "Assets held in bankruptcy-remote Special Purpose Vehicle"
+        },
+        "regulation": {
+          "title": "CVM Regulated",
+          "description": "Supervised by Brazilian Securities Commission"
+        },
+        "segregation": {
+          "title": "Asset Segregation",
+          "description": "Your investment legally separated from operational risks"
+        }
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "From investment to returns in simple steps",
+    "dealFlow": {
+      "title": "Deal Flow",
+      "steps": {
+        "investor": {
+          "title": "Investor",
+          "description": "Invest EUR via stablecoins"
+        },
+        "fund": {
+          "title": "CR Fund",
+          "description": "Capital pooled in SPV"
+        },
+        "loan": {
+          "title": "Trade Finance Loan",
+          "description": "Fund commodity shipments"
+        },
+        "exporter": {
+          "title": "Exporter",
+          "description": "Ships goods to importer"
+        },
+        "importer": {
+          "title": "Importer",
+          "description": "Pays via Letter of Credit"
+        },
+        "returns": {
+          "title": "Returns",
+          "description": "Principal + interest returned"
+        }
+      }
+    },
+    "settlement": {
+      "title": "Settlement Comparison",
+      "traditional": {
+        "title": "Traditional Bank Settlement",
+        "duration": "5-7 days",
+        "steps": ["Wire initiated", "Correspondent banks", "SWIFT processing", "Settlement"]
+      },
+      "blockchain": {
+        "title": "Blockchain Settlement",
+        "duration": "Same day",
+        "steps": ["Stablecoin transfer", "Instant settlement"]
+      },
+      "timeSaved": "Time Saved: 5-7 days"
+    },
+    "collateral": {
+      "title": "Collateral Stack",
+      "layers": {
+        "lc": {
+          "title": "Letter of Credit",
+          "description": "Bank guarantee from importer's financial institution"
+        },
+        "cargo": {
+          "title": "Physical Cargo",
+          "description": "Commodities in transit or warehoused"
+        },
+        "insurance": {
+          "title": "Cargo Insurance",
+          "description": "Coverage against loss or damage"
+        },
+        "docs": {
+          "title": "Shipping Documents",
+          "description": "Bills of lading and warehouse receipts"
+        }
+      }
+    }
+  },
+  "pipeline": {
+    "title": "Current Pipeline",
+    "subtitle": "Real deals backed by real commodities",
+    "metrics": {
+      "total": "Total Pipeline",
+      "active": "Active Deals",
+      "avgDuration": "Avg Duration",
+      "commodities": "Commodities"
+    },
+    "deal": {
+      "amount": "Amount",
+      "route": "Route",
+      "duration": "Duration",
+      "security": "Security",
+      "counterparty": "Counterparty",
+      "status": "Status",
+      "deliveries": "deliveries",
+      "days": "days",
+      "viewDetails": "View Details"
+    },
+    "status": {
+      "active": "Active",
+      "completed": "Completed",
+      "pipeline": "Pipeline"
+    }
+  },
+  "comparison": {
+    "title": "Why Trade Finance?",
+    "subtitle": "Compare to traditional fixed income and DeFi",
+    "table": {
+      "metric": "Metric",
+      "govtBonds": "Govt Bonds",
+      "corpHY": "Corp HY",
+      "tradeFinance": "Trade Finance CR",
+      "yield": "Yield",
+      "duration": "Duration",
+      "collateral": "Collateral",
+      "liquidity": "Liquidity",
+      "correlation": "Correlation"
+    },
+    "values": {
+      "yield": {
+        "govt": "3-4%",
+        "corp": "6-8%",
+        "tf": "12%+"
+      },
+      "duration": {
+        "govt": "5-10 years",
+        "corp": "3-7 years",
+        "tf": "30-90 days"
+      },
+      "collateral": {
+        "govt": "Sovereign",
+        "corp": "Unsecured",
+        "tf": "Trade Receivables"
+      },
+      "liquidity": {
+        "govt": "Daily",
+        "corp": "Daily",
+        "tf": "Deal-matched"
+      },
+      "correlation": {
+        "govt": "High",
+        "corp": "Medium",
+        "tf": "Low"
+      }
+    },
+    "notDefi": {
+      "title": "Real Trade Finance, Not DeFi",
+      "subtitle": "What makes us different from crypto lending protocols",
+      "items": {
+        "borrowers": {
+          "bad": "Anonymous borrowers",
+          "good": "Verified trade companies"
+        },
+        "rates": {
+          "bad": "Algorithmic rates",
+          "good": "Deal-specific underwriting"
+        },
+        "collateral": {
+          "bad": "Crypto collateral",
+          "good": "Physical commodities + LC"
+        },
+        "risk": {
+          "bad": "Smart contract risk",
+          "good": "Legal SPV structure"
+        },
+        "returns": {
+          "bad": "Volatile token rewards",
+          "good": "Fixed EUR returns"
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know",
+    "categories": {
+      "product": "Product",
+      "risk": "Risk",
+      "process": "Process",
+      "legal": "Legal"
+    }
+  },
+  "cta": {
+    "title": "Get Started",
+    "subtitle": "Leave your details and our team will reach out to discuss investment opportunities",
+    "form": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "John Smith"
+      },
+      "email": {
+        "label": "Corporate Email",
+        "placeholder": "john@company.com",
+        "hint": "Please use your corporate email address"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+1 (555) 000-0000"
+      },
+      "submit": "Request Information",
+      "submitting": "Submitting...",
+      "success": {
+        "title": "Thank You!",
+        "message": "We've received your information and will be in touch shortly."
+      },
+      "error": "Something went wrong. Please try again or email us directly.",
+      "disclaimer": "By submitting, you agree to be contacted by our team regarding investment opportunities."
+    }
+  },
+  "footer": {
+    "description": "Blockchain-enabled trade finance securitization",
+    "legal": {
+      "title": "Legal",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "disclaimer": "Risk Disclaimer"
+    },
+    "disclaimer": "This material is for informational purposes only and does not constitute investment advice. Past performance is not indicative of future results. Investment involves risk including possible loss of principal.",
+    "copyright": "All rights reserved."
+  }
+}

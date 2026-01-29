@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "title": "Trade Finance CR | Retornos de Grau Institucional",
+    "description": "Ganhe 12% de retorno em EUR lastreado por recebiveis reais de trade finance. Liquidacao via blockchain, seguranca institucional."
+  },
+  "nav": {
+    "product": "Produto",
+    "howItWorks": "Como Funciona",
+    "pipeline": "Pipeline",
+    "whyTradeFinance": "Por Que Trade Finance",
+    "faq": "FAQ",
+    "invest": "Investir Agora"
+  },
+  "hero": {
+    "badge": "Nota de Credito Securitizada",
+    "title": "Trade Finance de Grau Institucional",
+    "titleHighlight": "Habilitado por Blockchain",
+    "subtitle": "Ganhe 12% de retorno em EUR lastreado por recebiveis reais de commodities. Curta duracao, colateralizado e diversificado em rotas comerciais globais.",
+    "cta": {
+      "primary": "Ver Pipeline",
+      "secondary": "Como Funciona"
+    },
+    "stats": {
+      "pipeline": "Pipeline",
+      "activeDeals": "Deals Ativos",
+      "avgDuration": "Duracao Media",
+      "days": "dias"
+    }
+  },
+  "product": {
+    "title": "Estrutura de Duas Tranches",
+    "subtitle": "Escolha seu perfil de risco-retorno",
+    "senior": {
+      "title": "Tranche Senior",
+      "badge": "Retorno Fixo",
+      "return": "12% a.a.",
+      "currency": "EUR",
+      "features": {
+        "priority": "Primeiro na cascata de pagamentos",
+        "fixed": "Retorno anual fixo",
+        "risk": "Perfil de risco menor",
+        "duration": "Ciclos de 30-90 dias"
+      },
+      "cta": "Selecionar Senior"
+    },
+    "junior": {
+      "title": "Tranche Junior",
+      "badge": "Retornos Excedentes",
+      "return": "Variavel",
+      "currency": "EUR",
+      "features": {
+        "upside": "Potencial de alta como equity",
+        "excess": "Todos os retornos acima de 12%",
+        "risk": "Maior risco/retorno",
+        "duration": "Ciclos de 30-90 dias"
+      },
+      "cta": "Selecionar Junior"
+    },
+    "cr": {
+      "title": "Securitizacao CR",
+      "subtitle": "Marco regulatorio brasileiro protegendo seu investimento",
+      "features": {
+        "spv": {
+          "title": "Estrutura SPV",
+          "description": "Ativos mantidos em Veiculo de Proposito Especifico blindado contra falencia"
+        },
+        "regulation": {
+          "title": "Regulado pela CVM",
+          "description": "Supervisionado pela Comissao de Valores Mobiliarios"
+        },
+        "segregation": {
+          "title": "Segregacao de Ativos",
+          "description": "Seu investimento legalmente separado de riscos operacionais"
+        }
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Do investimento aos retornos em passos simples",
+    "dealFlow": {
+      "title": "Fluxo do Deal",
+      "steps": {
+        "investor": {
+          "title": "Investidor",
+          "description": "Investe EUR via stablecoins"
+        },
+        "fund": {
+          "title": "Fundo CR",
+          "description": "Capital agregado em SPV"
+        },
+        "loan": {
+          "title": "Emprestimo Trade Finance",
+          "description": "Financia embarques de commodities"
+        },
+        "exporter": {
+          "title": "Exportador",
+          "description": "Envia mercadorias ao importador"
+        },
+        "importer": {
+          "title": "Importador",
+          "description": "Paga via Carta de Credito"
+        },
+        "returns": {
+          "title": "Retornos",
+          "description": "Principal + juros retornados"
+        }
+      }
+    },
+    "settlement": {
+      "title": "Comparacao de Liquidacao",
+      "traditional": {
+        "title": "Liquidacao Bancaria Tradicional",
+        "duration": "5-7 dias",
+        "steps": ["Transferencia iniciada", "Bancos correspondentes", "Processamento SWIFT", "Liquidacao"]
+      },
+      "blockchain": {
+        "title": "Liquidacao Blockchain",
+        "duration": "Mesmo dia",
+        "steps": ["Transferencia stablecoin", "Liquidacao instantanea"]
+      },
+      "timeSaved": "Tempo Economizado: 5-7 dias"
+    },
+    "collateral": {
+      "title": "Estrutura de Colateral",
+      "layers": {
+        "lc": {
+          "title": "Carta de Credito",
+          "description": "Garantia bancaria da instituicao financeira do importador"
+        },
+        "cargo": {
+          "title": "Carga Fisica",
+          "description": "Commodities em transito ou armazenadas"
+        },
+        "insurance": {
+          "title": "Seguro de Carga",
+          "description": "Cobertura contra perda ou dano"
+        },
+        "docs": {
+          "title": "Documentos de Embarque",
+          "description": "Conhecimentos de embarque e recibos de armazem"
+        }
+      }
+    }
+  },
+  "pipeline": {
+    "title": "Pipeline Atual",
+    "subtitle": "Deals reais lastreados por commodities reais",
+    "metrics": {
+      "total": "Pipeline Total",
+      "active": "Deals Ativos",
+      "avgDuration": "Duracao Media",
+      "commodities": "Commodities"
+    },
+    "deal": {
+      "amount": "Valor",
+      "route": "Rota",
+      "duration": "Duracao",
+      "security": "Garantia",
+      "counterparty": "Contraparte",
+      "status": "Status",
+      "deliveries": "entregas",
+      "days": "dias",
+      "viewDetails": "Ver Detalhes"
+    },
+    "status": {
+      "active": "Ativo",
+      "completed": "Concluido",
+      "pipeline": "Pipeline"
+    }
+  },
+  "comparison": {
+    "title": "Por Que Trade Finance?",
+    "subtitle": "Compare com renda fixa tradicional e DeFi",
+    "table": {
+      "metric": "Metrica",
+      "govtBonds": "Titulos Gov.",
+      "corpHY": "Corp HY",
+      "tradeFinance": "Trade Finance CR",
+      "yield": "Rendimento",
+      "duration": "Duracao",
+      "collateral": "Colateral",
+      "liquidity": "Liquidez",
+      "correlation": "Correlacao"
+    },
+    "values": {
+      "yield": {
+        "govt": "3-4%",
+        "corp": "6-8%",
+        "tf": "12%+"
+      },
+      "duration": {
+        "govt": "5-10 anos",
+        "corp": "3-7 anos",
+        "tf": "30-90 dias"
+      },
+      "collateral": {
+        "govt": "Soberano",
+        "corp": "Sem garantia",
+        "tf": "Recebiveis Comerciais"
+      },
+      "liquidity": {
+        "govt": "Diaria",
+        "corp": "Diaria",
+        "tf": "Vinculada ao deal"
+      },
+      "correlation": {
+        "govt": "Alta",
+        "corp": "Media",
+        "tf": "Baixa"
+      }
+    },
+    "notDefi": {
+      "title": "Trade Finance Real, Nao DeFi",
+      "subtitle": "O que nos diferencia de protocolos de emprestimo cripto",
+      "items": {
+        "borrowers": {
+          "bad": "Tomadores anonimos",
+          "good": "Empresas comerciais verificadas"
+        },
+        "rates": {
+          "bad": "Taxas algoritmicas",
+          "good": "Underwriting especifico por deal"
+        },
+        "collateral": {
+          "bad": "Colateral cripto",
+          "good": "Commodities fisicas + LC"
+        },
+        "risk": {
+          "bad": "Risco de smart contract",
+          "good": "Estrutura legal SPV"
+        },
+        "returns": {
+          "bad": "Recompensas em tokens volateis",
+          "good": "Retornos fixos em EUR"
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Tudo que voce precisa saber",
+    "categories": {
+      "product": "Produto",
+      "risk": "Risco",
+      "process": "Processo",
+      "legal": "Legal"
+    }
+  },
+  "cta": {
+    "title": "Comece Agora",
+    "subtitle": "Deixe seus dados e nossa equipe entrara em contato para discutir oportunidades de investimento",
+    "form": {
+      "name": {
+        "label": "Nome Completo",
+        "placeholder": "Joao Silva"
+      },
+      "email": {
+        "label": "E-mail Corporativo",
+        "placeholder": "joao@empresa.com",
+        "hint": "Por favor, use seu e-mail corporativo"
+      },
+      "phone": {
+        "label": "Telefone",
+        "placeholder": "+55 (11) 99999-9999"
+      },
+      "submit": "Solicitar Informacoes",
+      "submitting": "Enviando...",
+      "success": {
+        "title": "Obrigado!",
+        "message": "Recebemos suas informacoes e entraremos em contato em breve."
+      },
+      "error": "Algo deu errado. Por favor, tente novamente ou envie-nos um e-mail diretamente.",
+      "disclaimer": "Ao enviar, voce concorda em ser contatado por nossa equipe sobre oportunidades de investimento."
+    }
+  },
+  "footer": {
+    "description": "Securitizacao de trade finance habilitada por blockchain",
+    "legal": {
+      "title": "Legal",
+      "terms": "Termos de Servico",
+      "privacy": "Politica de Privacidade",
+      "disclaimer": "Aviso de Risco"
+    },
+    "disclaimer": "Este material e apenas para fins informativos e nao constitui aconselhamento de investimento. Desempenho passado nao e indicativo de resultados futuros. Investimento envolve risco incluindo possivel perda de principal.",
+    "copyright": "Todos os direitos reservados."
+  }
+}

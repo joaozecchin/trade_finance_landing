@@ -1,0 +1,138 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
+import { Check, X } from "lucide-react";
+import { Card, SectionHeader } from "@/components/ui";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+
+export default function Comparison() {
+  const t = useTranslations("comparison");
+
+  const tableRows = ["yield", "duration", "collateral", "liquidity", "correlation"];
+  const columns = ["govtBonds", "corpHY", "tradeFinance"];
+
+  const defiComparison = [
+    "borrowers",
+    "rates",
+    "collateral",
+    "risk",
+    "returns",
+  ];
+
+  return (
+    <section id="comparison" className="relative bg-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+
+        {/* Comparison Table */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mb-16"
+        >
+          <motion.div variants={fadeInUp} className="overflow-x-auto">
+            <Card className="overflow-hidden p-0">
+              <table className="w-full min-w-[600px]">
+                <thead>
+                  <tr className="border-b border-slate-700">
+                    <th className="text-left p-4 text-slate-400 font-medium">
+                      {t("table.metric")}
+                    </th>
+                    <th className="text-center p-4 text-slate-400 font-medium">
+                      {t("table.govtBonds")}
+                    </th>
+                    <th className="text-center p-4 text-slate-400 font-medium">
+                      {t("table.corpHY")}
+                    </th>
+                    <th className="text-center p-4 text-emerald-400 font-medium bg-emerald-500/5">
+                      {t("table.tradeFinance")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableRows.map((row, index) => (
+                    <tr
+                      key={row}
+                      className={
+                        index < tableRows.length - 1
+                          ? "border-b border-slate-800"
+                          : ""
+                      }
+                    >
+                      <td className="p-4 text-slate-300 font-medium">
+                        {t(`table.${row}`)}
+                      </td>
+                      <td className="p-4 text-center text-slate-400 financial-number">
+                        {t(`values.${row}.govt`)}
+                      </td>
+                      <td className="p-4 text-center text-slate-400 financial-number">
+                        {t(`values.${row}.corp`)}
+                      </td>
+                      <td className="p-4 text-center text-emerald-400 font-semibold bg-emerald-500/5 financial-number">
+                        {t(`values.${row}.tf`)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </Card>
+          </motion.div>
+        </motion.div>
+
+        {/* Not DeFi Section */}
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div variants={fadeInUp} className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              {t("notDefi.title")}
+            </h3>
+            <p className="text-slate-400">{t("notDefi.subtitle")}</p>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <Card variant="gradient" className="p-6 md:p-8">
+              <div className="space-y-4">
+                {defiComparison.map((item) => (
+                  <div
+                    key={item}
+                    className="flex flex-col sm:flex-row sm:items-center gap-4 py-3 border-b border-slate-800 last:border-b-0"
+                  >
+                    {/* Bad (DeFi) */}
+                    <div className="flex-1 flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                        <X className="w-4 h-4 text-red-400" />
+                      </div>
+                      <span className="text-slate-400">
+                        {t(`notDefi.items.${item}.bad`)}
+                      </span>
+                    </div>
+
+                    {/* Arrow for desktop */}
+                    <div className="hidden sm:block text-slate-600">→</div>
+
+                    {/* Good (Trade Finance) */}
+                    <div className="flex-1 flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-4 h-4 text-emerald-400" />
+                      </div>
+                      <span className="text-emerald-400 font-medium">
+                        {t(`notDefi.items.${item}.good`)}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
