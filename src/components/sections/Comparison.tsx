@@ -33,52 +33,58 @@ export default function Comparison() {
           viewport={{ once: true, margin: "-100px" }}
           className="mb-12 sm:mb-16"
         >
-          <motion.div variants={fadeInUp} className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-            <Card className="overflow-hidden p-0">
-              <table className="w-full min-w-[480px] sm:min-w-[600px]">
-                <thead>
-                  <tr className="border-b border-slate-700">
-                    <th className="text-left p-2 sm:p-3 md:p-4 text-slate-400 font-medium text-xs sm:text-sm">
-                      {t("table.metric")}
-                    </th>
-                    <th className="text-center p-2 sm:p-3 md:p-4 text-slate-400 font-medium text-xs sm:text-sm">
-                      {t("table.govtBonds")}
-                    </th>
-                    <th className="text-center p-2 sm:p-3 md:p-4 text-slate-400 font-medium text-xs sm:text-sm">
-                      {t("table.corpHY")}
-                    </th>
-                    <th className="text-center p-2 sm:p-3 md:p-4 text-emerald-400 font-medium bg-emerald-500/5 text-xs sm:text-sm">
-                      {t("table.tradeFinance")}
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {tableRows.map((row, index) => (
-                    <tr
-                      key={row}
-                      className={
-                        index < tableRows.length - 1
-                          ? "border-b border-slate-800"
-                          : ""
-                      }
-                    >
-                      <td className="p-2 sm:p-3 md:p-4 text-slate-300 font-medium text-xs sm:text-sm">
-                        {t(`table.${row}`)}
-                      </td>
-                      <td className="p-2 sm:p-3 md:p-4 text-center text-slate-400 financial-number text-xs sm:text-sm">
-                        {t(`values.${row}.govt`)}
-                      </td>
-                      <td className="p-2 sm:p-3 md:p-4 text-center text-slate-400 financial-number text-xs sm:text-sm">
-                        {t(`values.${row}.corp`)}
-                      </td>
-                      <td className="p-2 sm:p-3 md:p-4 text-center text-emerald-400 font-semibold bg-emerald-500/5 financial-number text-xs sm:text-sm">
-                        {t(`values.${row}.tf`)}
-                      </td>
+          <motion.div
+            variants={fadeInUp}
+            className="overflow-x-auto -mx-4 sm:mx-0"
+            style={{ WebkitOverflowScrolling: 'touch' }}
+          >
+            <div className="px-4 sm:px-0 min-w-min">
+              <Card className="overflow-hidden p-0">
+                <table className="w-full min-w-[500px]">
+                  <thead>
+                    <tr className="border-b border-slate-700">
+                      <th className="text-left p-2 sm:p-3 md:p-4 text-slate-400 font-medium text-xs sm:text-sm whitespace-nowrap">
+                        {t("table.metric")}
+                      </th>
+                      <th className="text-center p-2 sm:p-3 md:p-4 text-emerald-400 font-medium bg-emerald-500/10 text-xs sm:text-sm whitespace-nowrap">
+                        {t("table.tradeFinance")}
+                      </th>
+                      <th className="text-center p-2 sm:p-3 md:p-4 text-slate-400 font-medium text-xs sm:text-sm whitespace-nowrap">
+                        {t("table.govtBonds")}
+                      </th>
+                      <th className="text-center p-2 sm:p-3 md:p-4 text-slate-400 font-medium text-xs sm:text-sm whitespace-nowrap">
+                        {t("table.corpHY")}
+                      </th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </Card>
+                  </thead>
+                  <tbody>
+                    {tableRows.map((row, index) => (
+                      <tr
+                        key={row}
+                        className={
+                          index < tableRows.length - 1
+                            ? "border-b border-slate-800"
+                            : ""
+                        }
+                      >
+                        <td className="p-2 sm:p-3 md:p-4 text-slate-300 font-medium text-xs sm:text-sm whitespace-nowrap">
+                          {t(`table.${row}`)}
+                        </td>
+                        <td className="p-2 sm:p-3 md:p-4 text-center text-emerald-400 font-semibold bg-emerald-500/10 financial-number text-xs sm:text-sm whitespace-nowrap">
+                          {t(`values.${row}.tf`)}
+                        </td>
+                        <td className="p-2 sm:p-3 md:p-4 text-center text-slate-400 financial-number text-xs sm:text-sm whitespace-nowrap">
+                          {t(`values.${row}.govt`)}
+                        </td>
+                        <td className="p-2 sm:p-3 md:p-4 text-center text-slate-400 financial-number text-xs sm:text-sm whitespace-nowrap">
+                          {t(`values.${row}.corp`)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </Card>
+            </div>
           </motion.div>
         </motion.div>
 
